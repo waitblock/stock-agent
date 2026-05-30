@@ -24,7 +24,6 @@ IMPORTANT:
 
 Industry grouping:
 - Use standard sectors such as: Technology, Healthcare, Financials, Energy, Consumer Discretionary, Industrials, Utilities, Communication Services
-- If a ticker is an ETF or index fund, classify it as ETF regardless of exchange or theme.
 
 Rules:
 - Use the most recent available data
