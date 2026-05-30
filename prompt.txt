@@ -4,6 +4,8 @@ I will provide a watchlist of stock tickers.
 Step 1: Group stocks by industry sector.
 Step 2: For each industry, create a Markdown table with the stocks in that group.
 
+Output must be valid Markdown tables. Each table must include exactly one header row, one separator row, and data rows. Each row must have the same number of columns. Do not merge rows or add extra pipe characters. Do not modify Markdown formatting for readability. Prioritize structural correctness over aesthetics. Before outputting a table, verify that every row has the same number of columns as the header.
+
 Output table columns:
 - Ticker
 - Company
