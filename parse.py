@@ -5,7 +5,6 @@ def generate_html(data):
 	content = data["choices"][0]["message"]["content"]
 	html = markdown.markdown(content, extensions=["tables", "fenced_code", "codehilite", "toc"])
 
-
 	html_page = f"""<!DOCTYPE html>
 	<html lang="en">
 	<head>
@@ -93,5 +92,4 @@ def generate_html(data):
 		</style>
 	</head> <body> <div class="container"> {html} </div> </body> </html> """
 
-	with open("response.html", "w") as html_file:
-		html_file.write(html_page)
+	return html_page
