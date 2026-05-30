@@ -64,12 +64,25 @@ Table Rules:
 - If data is missing, use “N/A”
 - Within each table, sort rows by Signal in the following order: Buy → Hold → Sell.
 
-The watchlist contains ONLY stock or ETF ticker symbols.
-Every item is a financial ticker identifier, not a company name, keyword, or natural language term.
-
-You MUST treat each entry strictly as a ticker symbol and attempt to resolve it as a traded security.
-Do NOT interpret entries as words, phrases, or non-financial entities. If exchange prefixes are provided (e.g., NASDAQ:, NYSEARCA:), you MUST strip the prefix before putting it in your response.
-
-Watchlist: NASDAQ:MU, NASDAQ:AVGO, BATS:DRAM, NASDAQ:QQQ, NYSEARCA:SPY, NASDAQ:AAPL, NYSE:NOK, NASDAQ:NVDA, NASDAQ:AMD, NASDAQ:TSLA, NASDAQ:EOSE, NASDAQ:COST, NASDAQ:NBIS, NASDAQ:MSFT, NASDAQ:GOOG, NASDAQ:SMH, NYSEARCA:VOO, NASDAQ:ASTS, NYSEARCA:NASA
+Watchlist:
+- Micron Technology, Inc. (NASDAQ: MU)
+- Broadcom Inc. (NASDAQ: AVGO)
+- Roundhill Memory ETF (BATS: DRAM)
+- Invesco QQQ Trust Series 1 (NASDAQ: QQQ)
+- SPDR S&P 500 ETF Trust (NYSEARCA: SPY)
+- Apple Inc. (NASDAQ: AAPL)
+- Nokia Corporation (NYSE: NOK)
+- NVIDIA Corporation (NASDAQ: NVDA)
+- Advanced Micro Devices, Inc. (NASDAQ: AMD)
+- Tesla, Inc. (NASDAQ: TSLA)
+- Eos Energy Enterprises, Inc. (NASDAQ: EOSE)
+- Costco Wholesale Corporation (NASDAQ: COST)
+- Nebius Group N.V. (NASDAQ: NBIS)
+- Microsoft Corporation (NASDAQ: MSFT)
+- Alphabet Inc. (NASDAQ: GOOG)
+- VanEck Semiconductor ETF (NASDAQ: SMH)
+- Vanguard S&P 500 ETF (NYSEARCA: VOO)
+- AST SpaceMobile, Inc. (NASDAQ: ASTS)
+- Tema Space Innovators ETF (NYSEARCA: NASA)
 
 End with a disclaimer: “The information provided by this AI is for general informational and educational purposes only and should not be considered financial, investment, legal, or tax advice. AI systems can occasionally produce incorrect, incomplete, outdated, or misleading information. You should not rely on this information as a substitute for professional advice from a licensed financial advisor or other qualified professional. Any financial decisions you make are your own responsibility, and you should seek independent advice tailored to your specific situation before acting.”
