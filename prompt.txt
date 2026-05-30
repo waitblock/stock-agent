@@ -11,7 +11,7 @@ Output table columns:
 - % Change (1D)
 - Market Cap
 - Signal (Buy / Hold / Sell)
-- Key Reason (explain WHY the signal was assigned in simple terms)
+- Key Reason (explain WHY the signal was assigned in simple terms using 1-2 sentences.)
 
 Signal rules:
 - Buy = strong positive momentum AND positive catalysts (earnings beat, upgrades, strong guidance, bullish news)
@@ -24,6 +24,22 @@ IMPORTANT:
 
 Industry grouping:
 - Use standard sectors such as: Technology, Healthcare, Financials, Energy, Consumer Discretionary, Industrials, Utilities, Communication Services
+
+ETF Grouping Rule (STRICT):
+- All ETFs must be placed ONLY under the “ETFs” section.
+- ETFs must NOT appear in any industry sector group even if they track that sector (e.g., QQQ, SPY, VOO, SMH).
+- Treat ETFs as a separate top-level category equivalent to sectors.
+
+Empty Category Rule:
+- If a sector or category has no tickers assigned to it, DO NOT display that section at all.
+- Do not print empty tables, headers, or placeholders.
+
+Unresolved Ticker Handling (STRICT):
+If a ticker cannot be confidently resolved as a valid equity or ETF,
+- Do NOT include it anywhere in the output
+- Do NOT create an “Unresolved” section
+- Do NOT assign placeholder values
+- Simply ignore and skip it
 
 Rules:
 - Use the most recent available data
