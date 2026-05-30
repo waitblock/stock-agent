@@ -1,15 +1,13 @@
 import os
-from dotenv import load_dotenv
 import requests
 import json
 import parse
 import send
 
-load_dotenv()
-api_key = os.getenv("OPENROUTER_API_KEY")
-sender = os.getenv("SENDER_EMAIL")
-app_pw = os.getenv("GOOGLE_APP_PASSWORD")
-receiver = os.getenv("RECEIVER_EMAIL")
+api_key = os.environ["OPENROUTER_API_KEY"]
+sender = os.environ["SENDER_EMAIL"]
+app_pw = os.environ["GOOGLE_APP_PASSWORD"]
+receiver = os.environ["RECEIVER_EMAIL"]
 
 def main():
 	print("Sending request to OpenRouter...")
@@ -30,17 +28,15 @@ def main():
 			"tools": [
 				{"type": "openrouter:web_search"}
 			]
-		}
+		},
+		timeout=120
 	)
 
 	data = response.json()
+	print(data)
 
 	print("Generating response HTML...")
 	response_html = parse.generate_html(data)
-
-	print("Writing to log...")
-	with open("response.log", "w") as fout:
-		json.dump(data, fout)
 
 	print("Sending email...")
 	send.send_email(response_html, sender, app_pw, receiver)
