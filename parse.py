@@ -10,7 +10,6 @@ def generate_html(data):
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Markdown Render</title>
 		<style>
 		    body {{
 		    	font-size: 18px;
