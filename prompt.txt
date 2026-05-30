@@ -4,8 +4,6 @@ I will provide a watchlist of stock tickers.
 Step 1: Group equities by industry sector and ETFs into a separate ETF category.
 Step 2: For each industry, create a Markdown table with the stocks in that group.
 
-Summary Section (TOP SIGNALS):
-
 Before displaying any industry or ETF tables, include a Summary section.
 
 The Summary section must contain:
@@ -18,7 +16,7 @@ Summary Rules:
 - The Summary section must only include tickers that are assigned a Buy or Sell signal in the tables below (Do NOT include Hold-rated tickers).
 - Do NOT force exactly 3 Buy or Sell tickers; include fewer if there are not enough strong candidates.
 - Only include tickers that have clearly stronger signals than the rest of the watchlist.
-- Use bullet points, not tables, for the Summary section.
+- Do NOT use tables for the Summary section.
 - A ticker may appear only once in the Summary section.
 - The Summary section must exactly reflect the Signal values in the tables. No ticker may have conflicting classifications between Summary and tables.
 
