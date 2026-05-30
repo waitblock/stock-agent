@@ -21,7 +21,7 @@ def main():
 			"Content-Type": "application/json",
 		},
 		json={
-			"model": "deepseek/deepseek-v4-flash:free",
+			"model": "openai/gpt-oss-120b:free",
 			"messages": [
 			{
 				"role": "user",
