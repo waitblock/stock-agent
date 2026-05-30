@@ -9,6 +9,9 @@ sender = os.environ["SENDER_EMAIL"]
 app_pw = os.environ["GOOGLE_APP_PASSWORD"]
 receiver = os.environ["RECEIVER_EMAIL"]
 
+with open("prompt.txt") as prompt_file:
+	prompt = prompt_file.read()
+
 def main():
 	print("Sending request to OpenRouter...")
 	response = requests.post(
@@ -22,7 +25,7 @@ def main():
 			"messages": [
 			{
 				"role": "user",
-				"content": "You are an expert advising a person about stocks that is good at being concise. What are the biggest stocks to watch in the upcoming days? Explain why each stock is a good buy in simple terms. Include a disclaimer that you are not giving financial advice."
+				"content": prompt
 			}
 			],
 			"tools": [

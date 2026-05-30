@@ -13,6 +13,7 @@ def generate_html(data):
 		<title>Markdown Render</title>
 		<style>
 		    body {{
+		    	font-size: 18px;
 		        font-family: Arial, sans-serif;
 		        max-width: 900px;
 		        margin: 40px auto;
