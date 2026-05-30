@@ -43,6 +43,7 @@ If a ticker cannot be confidently resolved as a valid equity or ETF,
 Rules:
 - Use the most recent available data
 - Keep Key Reason to 1–2 sentences max
+- Evaluate each ticker based only on expected performance over the next 1–3 trading days.
 - Do NOT give investment advice or recommendations outside the table
 - If data is missing, use “N/A”
 - Do not include any extra commentary outside tables
