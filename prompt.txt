@@ -9,9 +9,6 @@ Output must be valid Markdown tables. Each table must include exactly one header
 Output table columns:
 - Ticker
 - Company
-- Price
-- % Change (1D)
-- Market Cap
 - Signal (Buy / Hold / Sell)
 - Key Reason (explain WHY the signal was assigned in simple terms using 1-2 sentences.)
 
