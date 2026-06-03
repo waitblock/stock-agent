@@ -14,27 +14,31 @@ with open("prompt.txt") as prompt_file:
 
 def main():
 	print("Sending request to OpenRouter...")
-	response = requests.post(
-		"https://openrouter.ai/api/v1/chat/completions",
-		headers={
-			"Authorization": f"Bearer {api_key}",
-			"Content-Type": "application/json",
-		},
-		json={
-			"model": "openai/gpt-oss-120b:free",
-			"messages": [
-			{
-				"role": "user",
-				"content": prompt
-			}
-			],
-			"tools": [
-				{"type": "openrouter:web_search"}
-			]
-		},
-		timeout=120
-	)
-	response.raise_for_status()
+	try:
+		response = requests.post(
+			"https://openrouter.ai/api/v1/chat/completions",
+			headers={
+				"Authorization": f"Bearer {api_key}",
+				"Content-Type": "application/json",
+			},
+			json={
+				"model": "openai/gpt-oss-120b:free",
+				"messages": [
+				{
+					"role": "user",
+					"content": prompt
+				}
+				],
+				"tools": [
+					{"type": "openrouter:web_search"}
+				]
+			},
+			timeout=60
+		)
+		response.raise_for_status()
+	except requests.exceptions.RequestException as e:
+		print(f"OpenRouter request failed: {e}")
+		exit(1)
 
 	data = response.json()
 	print(data)
