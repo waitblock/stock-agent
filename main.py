@@ -33,7 +33,7 @@ def main():
 					{"type": "openrouter:web_search"}
 				]
 			},
-			timeout=60
+			timeout=120
 		)
 		response.raise_for_status()
 	except requests.exceptions.RequestException as e:
