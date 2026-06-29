@@ -16,22 +16,15 @@ def main():
 	print("Sending request to OpenRouter...")
 	try:
 		response = requests.post(
-			"https://openrouter.ai/api/v1/chat/completions",
+			"https://openrouter.ai/api/v1/responses",
 			headers={
 				"Authorization": f"Bearer {api_key}",
 				"Content-Type": "application/json",
 			},
 			json={
-				"model": "openrouter/owl-alpha:free",
-				"messages": [
-				{
-					"role": "user",
-					"content": prompt
-				}
-				],
-				"tools": [
-					{"type": "openrouter:web_search"}
-				]
+				"input": prompt,
+				"model": "openrouter/owl-alpha",
+				"tools": [{"type": "openrouter:web_search"}]
 			},
 			timeout=120
 		)
@@ -45,6 +38,10 @@ def main():
 
 	print("Generating response HTML...")
 	response_html = parse.generate_html(data)
+
+	if response_html is None:
+		print("Failed to find response text. Exiting...")
+		return
 
 	print("Sending email...")
 	send.send_email(response_html, sender, app_pw, receiver)
