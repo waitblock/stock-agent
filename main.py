@@ -22,7 +22,7 @@ def main():
 				"Content-Type": "application/json",
 			},
 			json={
-				"model": "openai/gpt-oss-120b:free",
+				"model": "openrouter/owl-alpha:free",
 				"messages": [
 				{
 					"role": "user",
