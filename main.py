@@ -40,8 +40,13 @@ def main():
 		print(f"OpenRouter request failed: {e}")
 		exit(1)
 
-	data = response.json()
-	print(data)
+	try:
+		data = response.json()
+		print(data)
+	except requests.exceptions.JSONDecodeError:
+		print("Failed to parse JSON.")
+		print(response.text)
+		exit(1)
 
 	print("Generating response HTML...")
 	response_html = parse.generate_html(data)
