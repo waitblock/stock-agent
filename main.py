@@ -16,17 +16,24 @@ def main():
 	print("Sending request to OpenRouter...")
 	try:
 		response = requests.post(
-			"https://openrouter.ai/api/v1/responses",
+			"https://openrouter.ai/api/v1/chat/completions",
 			headers={
 				"Authorization": f"Bearer {api_key}",
 				"Content-Type": "application/json",
 			},
 			json={
-				"input": prompt,
 				"model": "openai/gpt-oss-120b:free",
-				"tools": [{"type": "openrouter:web_search"}]
+				"messages": [
+				{
+					"role": "user",
+					"content": prompt
+				}
+				],
+				"tools": [
+					{"type": "openrouter:web_search"}
+				]
 			},
-			timeout=240
+			timeout=120
 		)
 		response.raise_for_status()
 	except requests.exceptions.RequestException as e:
@@ -38,10 +45,6 @@ def main():
 
 	print("Generating response HTML...")
 	response_html = parse.generate_html(data)
-
-	if response_html is None:
-		print("Failed to find response text. Exiting...")
-		return
 
 	print("Sending email...")
 	send.send_email(response_html, sender, app_pw, receiver)

@@ -2,20 +2,7 @@ import json
 import markdown
 
 def generate_html(data):
-	message_block = next(
-	    (item for item in data["output"] if item["type"] == "message"),
-	    None
-	)
-	if message_block is None:
-		return None
-
-	content = next(
-	    (c["text"] for c in message_block["content"] if c["type"] == "output_text"),
-	    None
-	)
-	if content is None:
-		return None
-
+	content = data["choices"][0]["message"]["content"]
 	html = markdown.markdown(content, extensions=["tables", "fenced_code", "codehilite", "toc"])
 
 	html_page = f"""<!DOCTYPE html>

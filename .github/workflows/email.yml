@@ -10,7 +10,7 @@ jobs:
   send-email:
     runs-on: ubuntu-latest
 
-    timeout-minutes: 6
+    timeout-minutes: 3
 
     steps:
       - name: Checkout repo
