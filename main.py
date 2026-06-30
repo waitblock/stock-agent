@@ -38,6 +38,7 @@ def main():
 		response.raise_for_status()
 	except requests.exceptions.RequestException as e:
 		print(f"OpenRouter request failed: {e}")
+		print(response.text)
 		exit(1)
 
 	try:
