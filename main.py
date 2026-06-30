@@ -23,7 +23,7 @@ def main():
 			},
 			json={
 				"input": prompt,
-				"model": "openrouter/free",
+				"model": "openai/gpt-oss-120b:free",
 				"tools": [{"type": "openrouter:web_search"}]
 			},
 			timeout=240
