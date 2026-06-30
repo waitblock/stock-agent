@@ -23,10 +23,10 @@ def main():
 			},
 			json={
 				"input": prompt,
-				"model": "openrouter/owl-alpha",
+				"model": "openrouter/free",
 				"tools": [{"type": "openrouter:web_search"}]
 			},
-			timeout=120
+			timeout=240
 		)
 		response.raise_for_status()
 	except requests.exceptions.RequestException as e:
