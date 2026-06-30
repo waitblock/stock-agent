@@ -22,7 +22,7 @@ def main():
 				"Content-Type": "application/json",
 			},
 			json={
-				"model": "openrouter/free",
+				"model": "nvidia/nemotron-3-ultra-550b-a55b:free",
 				"messages": [
 				{
 					"role": "user",
